@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="Css/style.css">
 </head>
 <body>
+    <div class="overlay" id="overlay">
+        <h3>Thank you...</h3>
+    </div>
     <div class="bgvid">
             <video autoplay muted loop id="myVideo">
                     <source src="images/bgvideo.mp4" type="video/mp4">
@@ -29,7 +32,7 @@
                         <p>Example: "JaneDoe@xxx.com</p>
                     </div>
 
-                    <input type="button" value="Sign Up Now">
+                    <input type="button" value="Sign Up Now" id="cta-btn">
 
                 </form>
             </div>
@@ -45,6 +48,19 @@
 
     </section>
 
+    <script>
+        
 
+        let btn = document.getElementById('cta-btn');
+        let overlay = document.getElementById('overlay');
+
+        btn.addEventListener('click', () => {
+            overlay.style.display = 'grid';
+            overlay.classList.add('animate-overlay')
+        })
+
+
+
+    </script>
 </body>
 </html>
